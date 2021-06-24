@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/signup.css' %}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+        <h3>어떤 알람을 받고싶으세요?</h3>
+      <form action="" method="POST">
+        <label><input type="checkbox" name="council" value="총학생회">총학생회</label>
+        <label><input type="checkbox" name="council" value="자연대">자연대 학생회</label>
+        <label><input type="checkbox" name="council" value="전자정보대">전자정보대 학생회</label>
+        <label><input type="checkbox" name="council" value="공대">공대 학생회</label>
+      </form>
+      <a href="{% url 'signup' %}"><button id="btn_pre">Pre</button></a>
+      <a href="{% url 'alarm' %}"><button id="btn_next">Follow</button></a>
+    </div>
+  </body>
+</html>

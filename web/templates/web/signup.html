@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/signup.css' %}" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.png">
+  </head>
+  <body>
+    {{error}}
+    <div class="container">
+      <img class="logo_instagram" src="{% static 'img/멋사로고.png' %}" alt="instagram_logo">
+      <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+            <label for="">이름</label>
+            <input type="text" class="input_login" name="username" id="userID" placeholder="이름">
+            <br>
+            <label for="">학교명</label>
+            <div class="search">
+                <input type="search" class="input_search" name="usercollege" id="userID" placeholder="학교 검색하기">
+                <button id="btn_search">Search</button>
+            </div>
+            <br>
+            <label for="">아이디</label>
+            <div class="search">
+                <input type="text" class="input_search" name="userID" id="userID" placeholder="이름">
+                <button id="btn_confirm">Confirm</button>
+            </div>
+            <br>
+            <label for="">비밀번호</label>
+            <input type="password" class="input_login" name="password" id="userPW" placeholder="비밀번호">
+            <br>
+            <label for="">비밀번호 확인</label>
+            <input type="password" class="input_login" name="re_password" id="userPW" placeholder="비밀번호 확인">
+            <input type="submit">
+      </form>
+      <a href="{% url 'login' %}"><button id="btn_pre">Cancel</button></a>
+      <a href="{% url 'alarm' %}"><button id="btn_next">Next</button></a>
+    </div>
+  </body>
+</html>

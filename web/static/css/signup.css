@@ -1,0 +1,114 @@
+.container {
+    width: 500px;
+    height: 610px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px 5px;
+}
+
+img.logo_instagram {
+    align-self: center;
+    width: 180px;
+    margin: 20px 0;
+}
+.input_login {
+    width: 270px;
+    height: 40px;
+    margin: 3px auto;
+    padding: 0 10px;
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.input_search {
+    width: 180px;
+    height: 40px;
+    padding: 0 10px;
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-size: 14px;
+    float: left;
+}
+
+.input_login::placeholder {
+    font-size: 12px;
+    color: #8e8e8e;    
+}
+.input_login:focus {
+    border: 1px solid #8a8a8a;
+    outline: none;
+}
+#btn_pre {
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    margin: 15px auto;
+    background-color: #fa9b47;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+#btn_next {
+    width: 100px;
+    height: 35px;
+    position: relative;
+    left: 170px;
+    margin: 15px auto;
+    background-color: #fa9b47;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#btn_search {
+    width: 87px;
+    height: 38px;
+    padding: 0%;
+    background-color: #fa9b47;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#btn_confirm {
+    width: 87px;
+    height: 38px;
+    padding: 0%;
+    background-color: #fa9b47;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#btn_pre:enabled:hover {
+    cursor: pointer;
+}
+#btn_next:enabled:hover {
+    cursor: pointer;
+}
+#btn_search:enabled:hover {
+    cursor: pointer;
+}
+
+.search{
+    height: 42px;
+    width: 270px;
+}
