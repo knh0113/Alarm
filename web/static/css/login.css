@@ -37,7 +37,7 @@ img.logo {
 #btn_login {
     width: 268px;
     height: 30px;
-    margin: 13px auto;
+    margin: 20px auto;
     background-color: #fa9b47;
     border: none;
     border-radius: 3px;
@@ -59,6 +59,7 @@ img.logo {
 }
 a {
     cursor: default;
+    text-decoration: none;
 }
 .button_forgot {
     color : #00366B;

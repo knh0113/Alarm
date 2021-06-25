@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <img class="logo_instagram" src="{% static 'img/멋사로고.png' %}" alt="instagram_logo">
+      <img class="logo" src="{% static 'img/멋사로고.png' %}" alt="logo">
       <form action="{% url 'login' %}" method="POST">
         <span class="error" style="margin: 0%; color: red;">{{ error }}</span>
         {% csrf_token %}
@@ -18,8 +18,8 @@
         <input type="password" class="input_login" name="password" id="userPW" placeholder="비밀번호">   
         <input type="submit" id="btn_login" value="로그인">
       </form>
-      <a href="#none"><span class="button_forgot">비밀번호를 잊으셨나요?</span></a>
-      <a href="{% url 'signup' %}"><span class="button_signup">회원가입하기</span></a>
+      <a class="button_forgot">비밀번호를 잊으셨나요?</a>
+      <a href="{% url 'signup' %}" class="button_signup">회원가입하기</a>
     </div>
 
     <div class="container2">
