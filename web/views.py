@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password, check_password
 from .models import User
@@ -23,7 +24,7 @@ def login(request):
         if not (login_userid and login_password):
             response_data['error']="아이디와 비밀번호를 모두 입력해주세요."
         else : 
-            myuser = User.objects.get(userid=login_userid) 
+            myuser = User.objects.get(userid=login_userid)
             #db에서 꺼내는 명령. Post로 받아온 username으로 , db의 username을 꺼내온다.
             if check_password(login_password, myuser.password):
                 request.session['user'] = myuser.id 

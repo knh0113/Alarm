@@ -1,14 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Instagram</title>
-    <link href="../../style/common.css" rel="stylesheet" type="text/css" />
-    <link href="../../style/main.css" rel="stylesheet" type="text/css" />
-    <!-- favicon -->
-    <link rel="icon" href="img/favicon.png">
-    <link rel="instagram-icon" href="../../img/favicon.png">
+    <title>Main</title>
+    <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- navigation -->
@@ -17,11 +15,11 @@
         <div class="nav-1">
             <!-- <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png" alt="logo_img">
             <div class="vl"></div> -->
-            <img class="logo_instagram_txt" src="../../img/멋사로고.png" alt="logo_text" width="150px">
+            <img class="logo_instagram_txt" src="{% static 'img/멋사로고.png' %}" alt="logo_text" width="150px">
         </div>
         <div class="nav-2">
-          <img src="../../img/home.png" alt="홈">
-          <img src="../../img/dm.png" alt="DM">
+          <img src="{% static 'img/home.png' %}" alt="홈">
+          <img src="{% static 'img/dm.png' %}" alt="DM">
           <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
         </div>
       </div>
@@ -43,7 +41,7 @@
           <div class="icons-react">
             <div class="icons-left">
               <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
-              <img class="icon-react" src="../../img/dm.png" alt="DM">  
+              <img class="icon-react" src="{% static 'img/dm.png' %}" alt="DM">  
             </div>
             <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png" alt="북마크">
           </div>
@@ -68,7 +66,7 @@
           <div class="icons-react">
             <div class="icons-left">
               <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
-              <img class="icon-react" src="../../img/dm.png" alt="DM">    
+              <img class="icon-react" src="{% static 'img/dm.png' %}" alt="DM">    
             </div>
             <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png" alt="북마크">
           </div>
