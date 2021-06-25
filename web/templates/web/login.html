@@ -14,7 +14,7 @@
       <form action="{% url 'login' %}" method="POST">
         <span class="error" style="margin: 0%; color: red;">{{ error }}</span>
         {% csrf_token %}
-        <input type="text" class="input_login" name="username" id="userID" placeholder="아이디">
+        <input type="text" class="input_login" name="userid" id="userID" placeholder="아이디">
         <input type="password" class="input_login" name="password" id="userPW" placeholder="비밀번호">   
         <input type="submit" id="btn_login" value="로그인">
       </form>

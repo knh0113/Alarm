@@ -16,14 +16,14 @@ def login(request):
         return render(request, 'web/login.html')
 
     elif request.method == "POST":
-        login_username = request.POST.get('username', None)
+        login_userid = request.POST.get('userid', None)
         login_password = request.POST.get('password', None)
 
 
-        if not (login_username and login_password):
+        if not (login_userid and login_password):
             response_data['error']="아이디와 비밀번호를 모두 입력해주세요."
         else : 
-            myuser = User.objects.get(username=login_username) 
+            myuser = User.objects.get(userid=login_userid) 
             #db에서 꺼내는 명령. Post로 받아온 username으로 , db의 username을 꺼내온다.
             if check_password(login_password, myuser.password):
                 request.session['user'] = myuser.id 
@@ -55,7 +55,7 @@ def signup(request):
             res_data['error'] = '비밀번호가 다릅니다.'
             return redirect('signup')
         else :
-            user = User(username=username, password=make_password(password), usercollege=usercollege)
+            user = User(username=username, password=make_password(password), userid=userid, usercollege=usercollege)
             user.save()
         return render(request, 'web/signup.html', res_data)
 

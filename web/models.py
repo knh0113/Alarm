@@ -3,8 +3,9 @@ from django.conf import settings
 
 
 class User(models.Model):
-    username = models.CharField(max_length=64,verbose_name = '사용자명')
+    username = models.CharField(max_length=20,verbose_name = '사용자명')
     password = models.CharField(max_length=64,verbose_name = '비밀번호')
+    userid = models.CharField(max_length=64,verbose_name = '사용자명')
     usercollege = models.CharField(max_length=64,verbose_name = '학교')
     
     def __str__(self): # 이 함수 추가
