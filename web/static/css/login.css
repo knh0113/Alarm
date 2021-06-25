@@ -10,10 +10,10 @@
     border: 1px solid #DBDBDB;
     border-radius: 5px 5px;
 }
-img.logo_instagram {
+img.logo {
     align-self: center;
     width: 175px;
-    margin: 35px 0;
+    margin: 20px 0;
 }
 .input_login {
     width: 270px;

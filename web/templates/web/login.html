@@ -4,18 +4,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Instagram</title>
+    <title>Login</title>
     <link href="{% static 'css/common.css' %}" rel="stylesheet">
     <link href="{% static 'css/login.css' %}" rel="stylesheet">
-    <!-- favicon -->
-    <link rel="icon" href="img/favicon.png">
   </head>
   <body>
     <div class="container">
       <img class="logo_instagram" src="{% static 'img/멋사로고.png' %}" alt="instagram_logo">
-      <input type="text" class="input_login" name="userID" id="userID" placeholder="아이디">
-      <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
-      <a href="#none"><button id="btn_login" disabled>로그인</button></a>
+      <form action="{% url 'login' %}" method="POST">
+        <span class="error" style="margin: 0%; color: red;">{{ error }}</span>
+        {% csrf_token %}
+        <input type="text" class="input_login" name="username" id="userID" placeholder="아이디">
+        <input type="password" class="input_login" name="password" id="userPW" placeholder="비밀번호">   
+        <input type="submit" id="btn_login" value="로그인">
+      </form>
       <a href="#none"><span class="button_forgot">비밀번호를 잊으셨나요?</span></a>
       <a href="{% url 'signup' %}"><span class="button_signup">회원가입하기</span></a>
     </div>
@@ -25,7 +27,7 @@
       <div class="img"></div>
       <span>학교 공지를 빠르고 쉽게 받아보세요!</span>
     </div>
-
-    <script src="../../js/login.js"></script>
+<!-- 
+    <script src="../../js/login.js"></script> -->
   </body>
 </html>
